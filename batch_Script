@@ -1,0 +1,9 @@
+FOR %%a IN (1 2 3 4 5 6 7 8 9) DO (
+IF EXIST B:\agent\_work\%%a\s\<path_of_script_with_mongodb_commands_to _run> (
+cd /D C:\Program Files\MongoDB\Server\4.2\bin                  \\Path to run Mongodb
+mongo --username abcd --password abcd --authenticationDatabase mydb mydb < B:\agent\_work\%%a\s\<path_of_script_with_mongodb_commands_to _run>
+goto break
+)
+)
+:break
+exit
